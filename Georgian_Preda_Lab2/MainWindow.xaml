@@ -1,0 +1,57 @@
+﻿<Window x:Class="Georgian_Preda_Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Georgian_Preda_Lab2"
+        mc:Ignorable="d"
+        Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid x:Name="scfrmMain">
+        <Label Content="Doughnuts - Bake and Sale" Name="lblTitle" TextBlock.FontWeight="Bold" TextBlock.FontSize="24px" HorizontalAlignment="Left" Margin="48,27,0,0" VerticalAlignment="Top"/>
+        <GroupBox Header="Raised" Name="gbRaised" FontWeight="Bold" Margin="48,65,477,237">
+        </GroupBox>
+        <GroupBox Header="Filled" Name="gbFilled" FontWeight="Bold" Margin="351,65,166,217">
+        </GroupBox>
+        <Label Content="Glazed" Name="lblGlazedRaised" HorizontalAlignment="Left" Height="32" Margin="68,87,0,0" VerticalAlignment="Top" Width="52"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Name="txtGlazedRaised" Margin="145,87,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Height="32"/>
+        <Label Content="Sugar" Name="lblSugarRaised" HorizontalAlignment="Left" Height="32" Margin="68,130,0,0" VerticalAlignment="Top" Width="51"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Name="txtSugarRaised" Margin="145,130,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Height="32"/>
+        <Label Content="Lemon" Name="lblLemonFilled" HorizontalAlignment="Center" Height="32" Margin="0,87,0,0" VerticalAlignment="Top" Width="52"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Name="txtLemonFilled" Margin="472,87,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Height="32"/>
+        <Label Content="Chocolate" Name="lblChocolateFilled" HorizontalAlignment="Left" Height="32" Margin="374,128,0,0" VerticalAlignment="Top" Width="87"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Name="txtChocolateFilled" Margin="472,130,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Height="32"/>
+        <Label Content="Vanilla" Name="lblVanillaFilled" HorizontalAlignment="Center" Height="32" Margin="0,165,0,0" VerticalAlignment="Top" Width="51"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Name="txtVanillaFilled" Margin="472,167,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Height="32"/>
+        <GroupBox Header="Current Sale" Name="gbSale" FontWeight="Bold" Margin="10,244,23,22">
+            <Canvas>
+                <Label Content="Quantity" Name="lblQuantity" Canvas.Left="10" Canvas.Top="10"/>
+                <TextBox Canvas.Left="74" TextWrapping="Wrap" Text="0" Canvas.Top="14" Width="120"/>
+                <Label Content="Type" Name="lblType" Canvas.Left="226" Canvas.Top="8"/>
+                <ComboBox Canvas.Left="280" Name="cmbType" Canvas.Top="12" Width="120"/>
+                <Label Content="Price" Name="lblPrice" Canvas.Left="432" Canvas.Top="5"/>
+                <TextBox Canvas.Left="493" Name="txtPrice" TextWrapping="Wrap" Text="0" Canvas.Top="10" Width="120"/>
+                <ListBox Height="46" Name="lstSale" Width="589" Canvas.Left="24" Canvas.Top="39"/>
+                <Label Content="Total" Name="lblTotal" Canvas.Left="432" Canvas.Top="93"/>
+                <TextBox Canvas.Left="493" TextWrapping="Wrap" Name="txtTotal" Text="0" Canvas.Top="97" Width="120"/>
+                <Button Name="btnAddToSale" Content="Add To Sale" Canvas.Left="640" Canvas.Top="11"/>
+                <Button Name="btnRemoveItem" Content="Remove Item" Canvas.Left="640" Canvas.Top="50"/>
+                <Button Name="btnCheckOut" Content="Check Out" Canvas.Left="640" Canvas.Top="95"/>
+            </Canvas>
+        </GroupBox>
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="131" Margin="0,26,0,0">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Doughnuts">
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed" Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar" IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled"/>
+                </MenuItem>
+                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
