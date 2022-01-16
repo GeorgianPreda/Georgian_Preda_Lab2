@@ -49,6 +49,7 @@
                         <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar" IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                     </MenuItem>
                     <MenuItem Header="Filled"/>
+                    <MenuItem x:Name="mnuStop" Header="Stop"/>
                 </MenuItem>
                 <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
             </MenuItem>
